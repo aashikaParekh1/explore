@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<link rel="stylesheet" href="stylesheet.css">
+
+<head> <title> Exploration Without Boredom </title> </head>
+
+<body style="background-color:#b3edef;">
+
+<ul>
+  <li><a href="welcomePage.html">Home</a></li>
+  <li><a href="aboutPage.html">About</a></li>
+  <li><a href="mapsPage.html">Maps</a></li>
+  <li><a href="formPage.html">Forms</a></li>
+  <li><a href="commentsPage.html">Comments and Reviews</a></li>
+  
+</ul>
+
+<h1>Comments and Review</h1>
+
+<style>
+table, th, td {
+    border: 0px solid black;
+}
+</style>
+
+<!DOCTYPE html>
+<html>
+
+<link rel="stylesheet" href="stylesheet.css">
+
+<head> <title> About the Creators </title> </head>
+
+<style>
+body {
+   background-image: url("Sunset-Beach-1030x644.jpg");
+   background-color: #cccccc;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover {
+    background-color: #111;
+}
+
+div.container {
+    width: 75%;
+    border: 10px solid black;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: black;
+    clear: left;
+    text-align: center;
+}
+
+nav {
+    float: left;
+    max-width: 160px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+   
+nav ul a {
+    text-decoration: none;
+}
+
+ul.b{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:  #cccccc;
+}
+</style>
+
+<body>
+
+<textarea rows="4" cols="50" id="comment" name="comment" form="usrform">
+Enter text here...</textarea>
+
+<form id="usrform">
+  Name: <input type="text" id="usrname">
+</form>
+<br>
+<button onclick="myFunction()">Submit</button>
+<br>
+<p id="demo">
+<p id="com"> 
+
+
+<script>
+var comments = [];
+function myFunction() {
+  var name=document.getElementById("usrname").value;
+  var comment=name + ": " + document.getElementById("comment").value;
+   
+  comments.push(comment)
+  document.getElementById("demo").innerHTML = "Thank you for submitting your comment!";
+  text = "<ul class='b'>";
+  for (i = 0; i < comments.length; i++) {
+    text += "<li class='a'>" + comments[i] + "</li>" + "<br>";
+  }
+  text += "</ul>";
+  document.getElementById("com").innerHTML = text;
+}
+
+</script>
+
+</body>
+
+</html>

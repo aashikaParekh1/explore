@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+
+<link rel="stylesheet" href="stylesheet.css">
+
+<head> <title> Forms </title> </head>
+
+<style>
+body {
+   background-image: url("modern-map.jpg");
+   background-color: #cccccc;
+}
+
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+li {
+    float: left;
+}
+
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover {
+    background-color: #111;
+}
+
+div.a {
+    font-size:250%;
+}
+
+
+
+
+</style>
+
+
+
+
+<body>
+
+
+<ul>
+  <li><a href="welcomePage.html">Home</a></li>
+  <li><a href="aboutPage.html">About</a></li>
+  <li><a href="formPage.html">Forms</a></li>
+  <li><a href="mapsPage.html">Maps</a></li>
+  <li><a href="commentsPage.html">Comments and Reviews</a></li>
+</ul>
+  
+  <br>
+   <br>
+    <br>
+    <br>
+
+
+<form  name="travel" action="#" onsubmit = "myFunction()"> 
+
+<h1><font color="white">Choose your destination</font></h1>
+
+<select id="destination">
+  <option value="London">London</option>
+  <option value="New York">New York</option>
+  <option value="Los Angeles">Los Angeles</option>
+</select>
+<br>
+<br>
+
+<h1><font color="white">Age Group</font></h1>
+<select id="age">
+  <option value="Kids">Kids</option>
+  <option value="Adults">Adults</option>
+</select>
+<br>
+<br>
+
+<h1><font color="white">weather</font></h1>
+<select id="weather">
+  <option value="Sunny">Sunny</option>
+  <option value="Cloudy">Cloudy</option>
+  <option value="Rainy">Rainy</option>
+  <option value="Snowy">Snowy</option>
+</select>
+<!--<form action="/action_page.php"> -->
+
+<!-- <form action="https://www.tripadvisor.com/Attractions-g32655-Activities-Los_Angeles_California.html"> -->
+
+
+
+  <input type="submit" value="Submit">
+
+  <p id="demo"></p>
+
+
+
+</form> 
+
+
+</body>
+
+
+<script>
+
+//read value from text boxes
+//if England and Kids are seleted then give these place
+//else if England and Adults are selected then give those places
+
+function myFunction() {
+    
+  var dest = document.getElementById("destination").value;
+  var age = document.getElementById("age").value;
+  var temp = document.getElementById("weather").value;
+
+  console.log(dest+","+age+","+temp);
+
+
+//London
+
+  if( dest == "London" && age == "Adults" && temp == "Sunny") {
+     document.getElementById("demo").innerHTML = "Tower Bridge";
+  }
+  else if( dest == "London" && age == "Kids" && temp == "Sunny") {
+     document.getElementById("demo").innerHTML = "Battery Park"; 
+  
+  }
+  else if( dest == "London" && age == "Adults" && temp == "Cloudy") {
+        document.getElementById("demo").innerHTML = "Big Ben"; 
+  }
+
+  else if( dest == "London" && age == "Kids" && temp == "Cloudy") {
+      document.getElementById("demo").innerHTML = "London Eye"; 
+  
+  }
+
+  else if( dest == "London" && age == "Adults" && temp == "Rainy") {
+      document.getElementById("demo").innerHTML = "Madam Tusads"; 
+  
+  }
+
+  else if( dest == "London" && age == "Kids" && temp == "Rainy") {
+      document.getElementById("demo").innerHTML = "Warner Bros Studios"; 
+  
+  }
+
+  else if( dest == "London" && age == "Adults" && temp == "Snowy") {
+      document.getElementById("demo").innerHTML = "Snowball Fight in Hyde Park"; 
+  
+  }
+
+  else if( dest == "London" && age == "Kids" && temp == "Snowy") {
+      document.getElementById("demo").innerHTML = "Snow Sledding at Hampstead Heath"; 
+  
+  }
+
+// New York
+  
+  if( dest == "New York" && age == "Adults" && temp == "Sunny") {
+     document.getElementById("demo").innerHTML = "Central Park";
+  }
+  else if( dest == "New York" && age == "Kids" && temp == "Sunny") {
+     document.getElementById("demo").innerHTML = "Coney Island"; 
+  
+  }
+  else if( dest == "New York" && age == "Adults" && temp == "Cloudy") {
+        document.getElementById("demo").innerHTML = "Statue of Liberty"; 
+  }
+
+  else if( dest == "New York" && age == "Kids" && temp == "Cloudy") {
+      document.getElementById("demo").innerHTML = "Walk the Brooklyn Bridge"; 
+  
+  }
+
+  else if( dest == "New York" && age == "Adults" && temp == "Rainy") {
+      document.getElementById("demo").innerHTML = "Broadway"; 
+  
+  }
+
+  else if( dest == "New York" && age == "Kids" && temp == "Rainy") {
+      document.getElementById("demo").innerHTML = "New York Hall of Science"; 
+  
+  }
+
+  else if( dest == "New York" && age == "Adults" && temp == "Snowy") {
+      document.getElementById("demo").innerHTML = "9/11 Memorial"; 
+  
+  }
+
+  else if( dest == "New York" && age == "Kids" && temp == "Snowy") {
+      document.getElementById("demo").innerHTML = "Rockefeller + Ice Skating"; 
+  
+  }
+  
+  //Los Angeles
+  
+  if( dest == "Los Angeles" && age == "Adults" && temp == "Sunny") {
+     document.getElementById("demo").innerHTML = "Venice Beach’s Ocean Front Walk";
+  }
+  else if( dest == "Los Angeles" && age == "Kids" && temp == "Sunny") {
+     document.getElementById("demo").innerHTML = "Disneyland"; 
+  
+  }
+  else if( dest == "Los Angeles" && age == "Adults" && temp == "Cloudy") {
+        document.getElementById("demo").innerHTML = "Venice Canals"; 
+  }
+
+  else if( dest == "Los Angeles" && age == "Kids" && temp == "Cloudy") {
+      document.getElementById("demo").innerHTML = "Hollywood Walk the Fame"; 
+  
+  }
+
+  else if( dest == "Los Angeles" && age == "Adults" && temp == "Rainy") {
+      document.getElementById("demo").innerHTML = "Santa Monica Pier"; 
+  
+  }
+
+  else if( dest == "Los Angeles" && age == "Kids" && temp == "Rainy") {
+      document.getElementById("demo").innerHTML = " Los Angeles Memorial Coliseum and Sports Arena"; 
+  
+  }
+
+  else if( dest == "Los Angeles" && age == "Adults" && temp == "Snowy") {
+      document.getElementById("demo").innerHTML = "Hollywood"; 
+  
+  }
+
+  else if( dest == "Los Angeles" && age == "Kids" && temp == "Snowy") {
+      document.getElementById("demo").innerHTML = "Universal Studios"; 
+  
+  }
+
+
+}  
+</script>
+
+</html>

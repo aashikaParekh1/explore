@@ -1,0 +1,55 @@
+
+
+
+
+//Box/toolbar
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #000c0c;
+}
+
+li {
+    float: left;
+}
+
+//Words on toolbar
+li a {
+    display: block;
+    color: #ddb3fc;
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
+    font-family: "Georgia";
+    font-size: 100%
+}
+//Tab Hover
+li a:hover {
+    background-color: #8e0eed;
+}
+
+
+ul li {
+    float: left;
+}
+
+ul li a {
+    displlign: center;
+    padding: 20px;
+    text-decoration: none;
+    font-family: "Comic Sans MS body copy";
+    font-size: 100%
+}
+ay: block;
+    color: #DAA520;
+    text-a
+ul li a:hover {
+    background-color: #b3edef;
+}
+
+{ 
+
+}
+
